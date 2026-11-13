@@ -53,3 +53,5 @@ footer{align-items:flex-start;gap:40px;padding-top:56px;padding-bottom:40px;line
 footer a{text-decoration:none}
 footer a:hover{color:var(--cream)}
 @media(max-width:900px){footer{gap:28px}}
+.ph-img{object-fit:cover;width:100%;display:block;background:var(--ph)}
+img.ph-img[style*="flex"]{min-width:0}
