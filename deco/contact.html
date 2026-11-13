@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maison Verel — Contact</title>
-<meta name="description" content="Réservez un créneau ou écrivez-nous.">
+<meta name="description" content="Réservez un appel de vingt minutes ou écrivez-nous.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap">
@@ -15,19 +15,20 @@
   <a class="logo" href="index.html">Maison Verel</a>
   <nav>
     <a href="collections.html">Collections</a>
+    <a href="projets.html">Projets</a>
     <a href="ateliers.html">Ateliers</a>
-    <a href="apropos.html">À propos</a>
+    <a href="journal.html">Journal</a>
+    <a href="apropos.html">&Agrave; propos</a>
     <a href="contact.html" class="on">Contact</a>
     <a class="btn-o" href="panier.html">Panier (<span id="count">0</span>)</a>
   </nav>
 </header>
 
-<section style="padding-bottom:48px;max-width:760px">
+<section style="padding-bottom:48px;max-width:780px">
   <p class="eyebrow" style="margin-bottom:20px">Contact</p>
   <h1 style="font-size:52px;line-height:1.1;margin-bottom:20px">On en parle vingt minutes ?</h1>
-  <p class="lead" style="margin:0">Choisissez un cr&eacute;neau, ou &eacute;crivez-moi si vous pr&eacute;f&eacute;rez. Je r&eacute;ponds sous deux jours ouvr&eacute;s.</p>
+  <p class="lead" style="margin:0">Choisissez un cr&eacute;neau, ou &eacute;crivez-moi si vous pr&eacute;f&eacute;rez. Je r&eacute;ponds moi-m&ecirc;me, sous deux jours ouvr&eacute;s.</p>
 </section>
-
 <section style="padding-top:0;display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start">
   <div style="flex:1 1 420px;min-width:0;border:1px solid var(--line);background:var(--white);padding:40px">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
@@ -43,23 +44,23 @@
       </div>
       <button class="btn" style="margin-top:24px;width:100%" onclick="alert('D&eacute;mo : la r&eacute;servation n&apos;est pas active sur cette maquette.')">Confirmer le rendez-vous</button>
     </div>
-    <p id="hint" style="margin:24px 0 0;font-size:14px;color:var(--mute)">Les dates en noir sont disponibles.</p>
+    <p id="hint" style="margin:24px 0 0;font-size:14px;color:var(--mute)">Les dates en noir sont disponibles. Vingt minutes, sans engagement.</p>
   </div>
-
   <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:24px">
     <h2 style="font-size:24px">Ou &eacute;crivez-moi</h2>
     <form onsubmit="event.preventDefault();alert('D\u00e9mo : le formulaire n\u0027est pas actif sur cette maquette.')">
       <div style="margin-bottom:20px"><label for="nom">Nom</label><input id="nom" type="text" required></div>
       <div style="margin-bottom:20px"><label for="mail">Email</label><input id="mail" type="email" required></div>
       <div style="margin-bottom:20px"><label for="sujet">Sujet</label>
-        <select id="sujet"><option>Un projet d'int&eacute;rieur</option><option>Un atelier</option><option>Une pi&egrave;ce de la boutique</option><option>Autre</option></select></div>
-      <div style="margin-bottom:24px"><label for="msg">Votre message</label><textarea id="msg" rows="5"></textarea></div>
+        <select id="sujet"><option>Un projet d&#39;int&eacute;rieur</option><option>Un atelier</option><option>Une pi&egrave;ce de la boutique</option><option>Un lieu professionnel</option><option>Autre</option></select></div>
+      <div style="margin-bottom:24px"><label for="msg">Votre message</label><textarea id="msg" rows="5" placeholder="La pi&egrave;ce, ce qui vous g&ecirc;ne, et depuis quand."></textarea></div>
       <button class="btn" type="submit">Envoyer</button>
     </form>
     <div style="border-top:1px solid var(--line);padding-top:24px;font-size:15px;color:var(--mute);line-height:1.8">
       <p style="margin:0">Atelier sur rendez-vous</p>
       <p style="margin:0">Greenpoint, Brooklyn</p>
       <p style="margin:0">bonjour@maisonverel.com</p>
+      <p style="margin:12px 0 0"><a href="faq.html">Questions fr&eacute;quentes</a></p>
     </div>
   </div>
 </section>
@@ -70,11 +71,11 @@
   </div>
   <div style="flex:1 1 160px;min-width:0">
     <p style="margin:0 0 12px;color:var(--cream)">Boutique</p>
-    <p style="margin:0;line-height:2"><a href="collections.html">Collections</a><br><a href="collection-hiver.html">Collection Hiver</a><br><a href="panier.html">Panier</a><br><a href="contact.html">Livraison et retours</a></p>
+    <p style="margin:0;line-height:2"><a href="collections.html">Collections</a><br><a href="collection-hiver.html">Collection Hiver</a><br><a href="panier.html">Panier</a><br><a href="faq.html">Livraison et retours</a></p>
   </div>
   <div style="flex:1 1 160px;min-width:0">
     <p style="margin:0 0 12px;color:var(--cream)">Le studio</p>
-    <p style="margin:0;line-height:2"><a href="apropos.html">&Agrave; propos</a><br><a href="ateliers.html">Ateliers</a><br><a href="contact.html">Projets d&#39;int&eacute;rieur</a><br><a href="contact.html">Contact</a></p>
+    <p style="margin:0;line-height:2"><a href="apropos.html">&Agrave; propos</a><br><a href="projets.html">Projets</a><br><a href="ateliers.html">Ateliers</a><br><a href="journal.html">Journal</a><br><a href="faq.html">Questions fr&eacute;quentes</a></p>
   </div>
   <div style="flex:1 1 200px;min-width:0">
     <p style="margin:0 0 12px;color:var(--cream)">Rester en lien</p>
@@ -83,7 +84,7 @@
   </div>
   <div style="flex:1 1 100%;border-top:1px solid #332E27;padding-top:24px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between">
     <p style="margin:0">&copy; 2026 Maison Verel</p>
-    <p style="margin:0"><a href="contact.html">Mentions l&eacute;gales</a> &middot; <a href="contact.html">Confidentialit&eacute;</a> &middot; <a href="contact.html">CGV</a></p>
+    <p style="margin:0"><a href="faq.html">Mentions l&eacute;gales</a> &middot; <a href="faq.html">Confidentialit&eacute;</a> &middot; <a href="faq.html">CGV</a></p>
     <p style="margin:0">Projet concept</p>
   </div>
 </footer>
