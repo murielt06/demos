@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison Verel — Contact</title>
+<meta name="description" content="Réservez un créneau ou écrivez-nous.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="index.html">Maison Verel</a>
+  <nav>
+    <a href="collections.html">Collections</a>
+    <a href="ateliers.html">Ateliers</a>
+    <a href="apropos.html">À propos</a>
+    <a href="contact.html" class="on">Contact</a>
+    <a class="btn-o" href="panier.html">Panier (<span id="count">0</span>)</a>
+  </nav>
+</header>
+
+<section style="padding-bottom:48px;max-width:760px">
+  <p class="eyebrow" style="margin-bottom:20px">Contact</p>
+  <h1 style="font-size:52px;line-height:1.1;margin-bottom:20px">On en parle vingt minutes ?</h1>
+  <p class="lead" style="margin:0">Choisissez un cr&eacute;neau, ou &eacute;crivez-moi si vous pr&eacute;f&eacute;rez. Je r&eacute;ponds sous deux jours ouvr&eacute;s.</p>
+</section>
+
+<section style="padding-top:0;display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start">
+  <div style="flex:1 1 420px;min-width:0;border:1px solid var(--line);background:var(--white);padding:40px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+      <h2 style="font-size:24px">Novembre 2026</h2>
+      <p style="margin:0;font-size:14px;color:var(--mute)">Heure de New York</p>
+    </div>
+    <div class="cal"><div class="head">L</div><div class="head">M</div><div class="head">M</div><div class="head">J</div><div class="head">V</div><div class="head">S</div><div class="head">D</div><div class="dim"></div><div class="dim"></div><div class="dim"></div><div class="dim"></div><div class="dim"></div><div class="dim"></div><div class="dim">1</div><div class="dim">2</div><div class="dim">3</div><div class="dim">4</div><div class="dim">5</div><div class="dim">6</div><div class="dim">7</div><div class="dim">8</div><div class="dim">9</div><div class="dim">10</div><div class="dim">11</div><div class="dim">12</div><div class="dim">13</div><div class="dim">14</div><div class="dim">15</div><div class="dim">16</div><div class="free" data-day="17">17</div><div class="free" data-day="18">18</div><div class="free" data-day="19">19</div><div class="free" data-day="20">20</div><div class="dim">21</div><div class="dim">22</div><div class="dim">23</div><div class="free" data-day="24">24</div><div class="free" data-day="25">25</div><div class="free" data-day="26">26</div><div class="free" data-day="27">27</div><div class="dim">28</div><div class="dim">29</div><div class="dim">30</div></div>
+    <div id="slots" style="margin-top:32px;display:none">
+      <p style="margin:0 0 16px;font-size:15px;color:var(--mute)">Cr&eacute;neaux du <span id="selday"></span> novembre</p>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+        <div class="slot">9:30</div><div class="slot">10:30</div><div class="slot">11:30</div>
+        <div class="slot">14:00</div><div class="slot">15:00</div><div class="slot">16:30</div>
+      </div>
+      <button class="btn" style="margin-top:24px;width:100%" onclick="alert('D&eacute;mo : la r&eacute;servation n&apos;est pas active sur cette maquette.')">Confirmer le rendez-vous</button>
+    </div>
+    <p id="hint" style="margin:24px 0 0;font-size:14px;color:var(--mute)">Les dates en noir sont disponibles.</p>
+  </div>
+
+  <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:24px">
+    <h2 style="font-size:24px">Ou &eacute;crivez-moi</h2>
+    <form onsubmit="event.preventDefault();alert('D\u00e9mo : le formulaire n\u0027est pas actif sur cette maquette.')">
+      <div style="margin-bottom:20px"><label for="nom">Nom</label><input id="nom" type="text" required></div>
+      <div style="margin-bottom:20px"><label for="mail">Email</label><input id="mail" type="email" required></div>
+      <div style="margin-bottom:20px"><label for="sujet">Sujet</label>
+        <select id="sujet"><option>Un projet d'int&eacute;rieur</option><option>Un atelier</option><option>Une pi&egrave;ce de la boutique</option><option>Autre</option></select></div>
+      <div style="margin-bottom:24px"><label for="msg">Votre message</label><textarea id="msg" rows="5"></textarea></div>
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+    <div style="border-top:1px solid var(--line);padding-top:24px;font-size:15px;color:var(--mute);line-height:1.8">
+      <p style="margin:0">Atelier sur rendez-vous</p>
+      <p style="margin:0">Greenpoint, Brooklyn</p>
+      <p style="margin:0">bonjour@maisonverel.com</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div style="flex:1 1 220px;min-width:0">
+    <p style="margin:0 0 12px;font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--cream)">Maison Verel</p>
+    <p style="margin:0;line-height:1.7">D&eacute;coration d&#39;int&eacute;rieur<br>Greenpoint, Brooklyn<br>New York</p>
+  </div>
+  <div style="flex:1 1 160px;min-width:0">
+    <p style="margin:0 0 12px;color:var(--cream)">Boutique</p>
+    <p style="margin:0;line-height:2"><a href="collections.html">Collections</a><br><a href="collection-hiver.html">Collection Hiver</a><br><a href="panier.html">Panier</a><br><a href="contact.html">Livraison et retours</a></p>
+  </div>
+  <div style="flex:1 1 160px;min-width:0">
+    <p style="margin:0 0 12px;color:var(--cream)">Le studio</p>
+    <p style="margin:0;line-height:2"><a href="apropos.html">&Agrave; propos</a><br><a href="ateliers.html">Ateliers</a><br><a href="contact.html">Projets d&#39;int&eacute;rieur</a><br><a href="contact.html">Contact</a></p>
+  </div>
+  <div style="flex:1 1 200px;min-width:0">
+    <p style="margin:0 0 12px;color:var(--cream)">Rester en lien</p>
+    <p style="margin:0 0 14px;line-height:1.7">Une lettre par saison, &agrave; la sortie de chaque collection.</p>
+    <p style="margin:0;line-height:2"><a href="contact.html">S&#39;inscrire</a><br><a href="contact.html">Instagram</a><br><a href="contact.html">Pinterest</a></p>
+  </div>
+  <div style="flex:1 1 100%;border-top:1px solid #332E27;padding-top:24px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between">
+    <p style="margin:0">&copy; 2026 Maison Verel</p>
+    <p style="margin:0"><a href="contact.html">Mentions l&eacute;gales</a> &middot; <a href="contact.html">Confidentialit&eacute;</a> &middot; <a href="contact.html">CGV</a></p>
+    <p style="margin:0">Projet concept</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
