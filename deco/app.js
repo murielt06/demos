@@ -82,13 +82,15 @@
   });
 
   // produit.html : lire le paramètre ?p=
-  var P = [["Plaid Brume","Laine bouillie, 140 x 200 cm",240],["Tabouret Souche","Chêne fumé massif",390],["Coussin Ardoise","Lin épais, 50 x 50 cm",95],["Bougeoir Veille","Laiton patiné, lot de deux",130],["Rideau Janvier","Lin lavé, sur mesure",320],["Coupe Neige","Céramique émaillée mate",48],["Banc Sillon","Chêne et sangle de lin",620],["Tapis Givre","Laine nouée main, 170 x 240 cm",980],["Vase Brouillard","Grès émaillé, deux tailles",110]];
+  var P = [["Plaid Brume","Laine bouillie, 140 x 200 cm",240,"plaid.jpg"],["Tabouret Souche","Chêne fumé massif",390,"tabouret.jpg"],["Coussin Ardoise","Lin épais, 50 x 50 cm",95,"coussin.jpg"],["Bougeoir Veille","Laiton patiné, lot de deux",130,"bougeoir.jpg"],["Rideau Janvier","Lin lavé, sur mesure",320,"rideau.jpg"],["Coupe Neige","Céramique émaillée mate",48,"coupe.jpg"],["Banc Sillon","Chêne et sangle de lin",620,"banc.jpg"],["Tapis Givre","Laine nouée main, 170 x 240 cm",980,"tapis.jpg"],["Vase Brouillard","Grès émaillé, deux tailles",110,"vase.jpg"]];
   var m = location.search.match(/p=(\d+)/);
   if (m && document.getElementById('ptitle')) {
     var it = P[Number(m[1])];
     if (it) {
       document.getElementById('ptitle').textContent = it[0];
       document.getElementById('pname').textContent = it[0];
+      var pi = document.getElementById('pimg');
+      if (pi && it[3]) { pi.src = 'img/' + it[3]; pi.alt = it[0]; }
       document.getElementById('pdesc').textContent = it[1];
       document.getElementById('pprice').textContent = it[2] + ' $';
       document.getElementById('addbtn').setAttribute('data-add', it[0] + '|' + it[2]);
