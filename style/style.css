@@ -1,7 +1,7 @@
 :root{
-  --paper:#FBF8F4; --sand:#F3EDE5; --white:#fff; --dark:#2A2522; --ink:#1B1A19;
-  --body:#45413C; --mute:#8A7F76; --line:#EAE3DA;
-  --red:#A8524A; --gold:#C9A227; --stone:#6E6A62;
+  --paper:#FAF7F8; --sand:#F2EAEE; --white:#fff; --dark:#2B1C26; --ink:#241821;
+  --body:#4A3B44; --mute:#8E7B86; --line:#E7DCE2;
+  --red:#B5566E; --gold:#D9A6B4; --stone:#6E5A68;
   --pad:clamp(20px,5vw,72px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -28,12 +28,12 @@ section{padding:clamp(52px,7vw,104px) var(--pad)}
 /* header */
 header{background:var(--dark);padding:20px var(--pad) 18px;text-align:center;position:relative;z-index:30}
 .logo{font-family:"Instrument Serif",Georgia,serif;font-size:25px;color:var(--paper);display:inline-block}
-.logo small{display:block;font-family:Inter,sans-serif;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#9D9289;margin-top:3px}
+.logo small{display:block;font-family:Inter,sans-serif;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#A892A0;margin-top:3px}
 nav{margin-top:16px;display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(14px,2.4vw,32px)}
-nav a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#C3B9B0;transition:color .2s}
+nav a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#CBB8C4;transition:color .2s}
 nav a:hover{color:var(--paper)}
 nav a[aria-current]{color:var(--paper);box-shadow:inset 0 -1px var(--red)}
-.burger{display:none;position:absolute;right:var(--pad);top:22px;width:42px;height:42px;border:1px solid #4A423C;
+.burger{display:none;position:absolute;right:var(--pad);top:22px;width:42px;height:42px;border:1px solid #4A3A44;
   background:transparent;border-radius:6px;cursor:pointer;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px}
 .burger span{display:block;width:18px;height:1.5px;background:var(--paper);transition:transform .3s,opacity .2s}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
@@ -42,7 +42,9 @@ nav a[aria-current]{color:var(--paper);box-shadow:inset 0 -1px var(--red)}
 
 /* hero */
 .hero{background:var(--dark);color:var(--paper);padding:clamp(48px,8vw,104px) var(--pad) clamp(56px,9vw,116px);text-align:center;position:relative;overflow:hidden}
-.hero .ph{position:absolute;inset:0;background:#332C28;z-index:0}
+.hero .ph{position:absolute;inset:0;background:#3A2632;z-index:0;overflow:hidden}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero .ph::after{content:"";position:absolute;inset:0;background:rgba(30,16,24,.56)}
 .hero > *{position:relative;z-index:1}
 .hero h1{max-width:19ch;margin:0 auto 18px}
 .hero p.sub{font-size:clamp(16px,1.7vw,20px);line-height:1.55;color:#CFC5BC;max-width:46ch;margin:0 auto 28px}
@@ -92,19 +94,19 @@ form input,form select,form textarea{width:100%;background:var(--white);border:1
 form input:focus,form select:focus,form textarea:focus{border-color:var(--red)}
 .fw{margin-bottom:20px}
 
-footer{background:var(--dark);color:#B3A89F;padding:clamp(42px,6vw,76px) var(--pad) 28px;display:flex;flex-wrap:wrap;gap:34px}
+footer{background:var(--dark);color:#C0ADB8;padding:clamp(42px,6vw,76px) var(--pad) 28px;display:flex;flex-wrap:wrap;gap:34px}
 footer .col{flex:1 1 180px;min-width:0}
 footer p{font-size:14.5px;line-height:1.95}
 footer a:hover{color:var(--paper)}
-footer .ft{flex:1 1 100%;border-top:1px solid #423933;padding-top:20px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:12px}
+footer .ft{flex:1 1 100%;border-top:1px solid #443039;padding-top:20px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:12px}
 
 @media(max-width:820px){
   .burger{display:flex}
-  nav{position:absolute;left:0;right:0;top:100%;background:var(--dark);border-top:1px solid #423933;
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--dark);border-top:1px solid #443039;
     flex-direction:column;align-items:stretch;gap:0;margin:0;padding:4px 0 12px;
     transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:29}
   nav.open{transform:none;opacity:1;pointer-events:auto}
-  nav a{padding:14px var(--pad);font-size:15px;letter-spacing:.06em;text-transform:none;border-bottom:1px solid #3A322D}
+  nav a{padding:14px var(--pad);font-size:15px;letter-spacing:.06em;text-transform:none;border-bottom:1px solid #3C2A35}
   nav a[aria-current]{box-shadow:none;color:var(--red)}
   header{padding-top:18px;padding-bottom:16px}
   .logo{font-size:22px}
