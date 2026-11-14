@@ -87,8 +87,8 @@ img.ph-img[style*="flex"]{min-width:0}
   /* blocs en deux colonnes qui doivent s'empiler proprement */
   section[style*="display:flex"]{gap:26px!important}
   /* images cote a cote : une seule colonne, hauteur raisonnable */
-  div[style*="display:flex"][style*="gap:8px"]{flex-direction:column}
-  div[style*="display:flex"][style*="gap:8px"] > *{height:210px!important;flex:1 1 auto!important}
+  div[style^="display:flex;gap:8px"]{flex-direction:column}
+  div[style^="display:flex;gap:8px"] > *{height:200px!important;flex:1 1 auto!important;min-height:0!important}
   img.ph-img[style*="min-height:520px"]{min-height:0!important;height:clamp(260px,62vw,420px)!important}
   img.ph-img[style*="min-height:420px"]{min-height:0!important;height:clamp(240px,58vw,390px)!important}
   img.ph-img[style*="height:340px"]{height:clamp(230px,58vw,330px)!important}
@@ -96,6 +96,8 @@ img.ph-img[style*="flex"]{min-width:0}
   img.ph-img[style*="height:300px"]{height:clamp(210px,54vw,300px)!important}
   /* vignettes du journal : image au-dessus du texte, pleine largeur */
   img.ph-img[style*="flex:0 0 220px"]{flex:1 1 100%!important;height:clamp(170px,44vw,230px)!important}
+  section[style*="align-items:stretch"] > div[style*="padding:80px 64px"]{padding:36px 24px!important}
+  div[style*="flex:1 1 520px"],div[style*="flex:1 1 400px"],div[style*="flex:1 1 460px"],div[style*="flex:999 1 460px"],div[style*="flex:1 1 380px"]{flex:1 1 100%!important}
   .cal{font-size:14px}
   .slot{padding:12px;font-size:14px}
   footer .col,footer > div{flex:1 1 100%!important}
