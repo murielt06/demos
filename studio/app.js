@@ -5,8 +5,8 @@
   },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(function(el,i){ el.style.transitionDelay=(i%4)*70+'ms'; io.observe(el); });
 
-  // cursor
-  if (window.matchMedia('(hover:hover)').matches) {
+  // cursor (off in light theme)
+  if (false) {
     var c = document.createElement('div'); c.className='cur'; document.body.appendChild(c);
     var x=0,y=0,cx=0,cy=0;
     addEventListener('mousemove',function(e){ x=e.clientX; y=e.clientY; });
