@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book a session &mdash; Juno Hale</title>
+<meta name="description" content="Book a consultation, closet edit or shopping day with Juno Hale in New York. Answer within two business days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">Juno Hale<small>Image consulting &middot; New York</small></a>
+  <button class="burger" aria-expanded="false" aria-label="Open menu" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav id="nav">
+    <a href="services.html">Services</a>
+    <a href="transformations.html">Transformations</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" aria-current="page">Book a session</a>
+  </nav>
+</header>
+
+<section style="padding-bottom:clamp(24px,3vw,40px)">
+  <p class="eyebrow rv" style="margin-bottom:18px">Book a session</p>
+  <h1 class="d d1 rv" style="max-width:16ch">Tell me what&rsquo;s going on.</h1>
+  <p class="lead rv" style="margin-top:22px">Two lines is enough. I answer within two business days, including when the answer is that I am not the right person for it.</p>
+</section>
+
+<section style="padding-top:0">
+  <div class="split" style="align-items:flex-start">
+    <div style="flex:1.6 1 380px">
+      <p class="eyebrow rv" style="margin-bottom:12px">Pick a time, or leave it blank</p>
+      <div class="slots rv" style="margin-bottom:12px"><div class="slot">Tue 18 Nov &middot; 10:00</div><div class="slot">Tue 18 Nov &middot; 14:00</div><div class="slot">Wed 19 Nov &middot; 11:30</div><div class="slot">Thu 20 Nov &middot; 09:30</div><div class="slot">Thu 20 Nov &middot; 15:00</div><div class="slot">Mon 24 Nov &middot; 10:00</div></div>
+      <p class="rv" style="display:none;font-size:14.5px;color:var(--red);margin-bottom:22px">Selected: <span id="picked"></span></p>
+
+      <form id="booking" class="rv" style="margin-top:22px">
+        <div class="fw"><label for="n">Your name</label><input id="n" required placeholder="First and last"></div>
+        <div class="fw"><label for="e">Email</label><input id="e" type="email" required placeholder="you@example.com"></div>
+        <div class="fw"><label for="s">Which session</label>
+          <select id="s"><option>Not sure yet</option><option>The consultation &middot; $220</option><option>The closet edit &middot; $480</option><option>The shopping day &middot; $850</option></select></div>
+        <div class="fw"><label for="m">What&rsquo;s going on</label><textarea id="m" rows="5" required placeholder="Two lines. What changed, and what you keep reaching for instead."></textarea></div>
+        <button class="btn btn-d" type="submit">Send</button>
+        <p style="margin-top:14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)">Demonstration form. Nothing is sent.</p>
+      </form>
+      <div id="sent" style="display:none;background:var(--white);border:1px solid var(--red);border-radius:8px;padding:clamp(22px,3vw,36px)">
+        <p class="d d3" style="color:var(--red);margin-bottom:12px">Got it</p>
+        <p style="font-size:16.5px;line-height:1.75;color:var(--body);max-width:46ch">I answer within two business days. If the time you picked has gone in the meantime, I will send you three others.</p>
+      </div>
+    </div>
+
+    <div style="flex:1 1 250px">
+      <div class="fill rv" style="background:var(--dark);height:clamp(180px,24vw,260px);margin-bottom:24px"><span style="color:#CFC5BC">The studio</span></div>
+      <div class="rv" style="border-top:1px solid var(--line);padding:16px 0"><p class="eyebrow" style="margin-bottom:6px">The studio</p><p style="font-size:16px;line-height:1.7;color:var(--body)">412 West 13th Street, Suite 3<br>New York, NY 10014</p></div>
+      <div class="rv" style="border-top:1px solid var(--line);padding:16px 0"><p class="eyebrow" style="margin-bottom:6px">Direct</p><p style="font-size:16px;line-height:1.7"><a href="mailto:hello@junohale.com" style="color:var(--red)">hello@junohale.com</a><br><span style="color:var(--body)">+1 212 555 0148</span></p></div>
+      <div class="rv" style="border-top:1px solid var(--line);padding:16px 0"><p class="eyebrow" style="margin-bottom:6px">Getting there</p><p style="font-size:16px;line-height:1.7;color:var(--body)">A, C, E or L to 14th Street, four minutes on foot. Buzzer 3, the name is not on the door.</p></div>
+      <div class="rv" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0"><p class="eyebrow" style="margin-bottom:6px">Closet edits</p><p style="font-size:16px;line-height:1.7;color:var(--body)">All five boroughs, no travel charge. Westchester and New Jersey, add $90.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="grid g3">
+    <div class="card rv"><h3>You&rsquo;re not sure yet</h3><p>Write anyway. A ninety-minute consultation exists exactly for this, and it commits you to nothing after it.</p></div>
+    <div class="card rv"><h3>It&rsquo;s not the right budget</h3><p>Say so. I know four very good people working at lower rates and I pass on what I cannot take.</p></div>
+    <div class="card rv"><h3>Someone else sent you</h3><p>Then tell me who. It changes nothing about the price and everything about how fast I answer.</p></div>
+  </div>
+</section>
+<footer>
+  <div class="col" style="flex:1 1 250px">
+    <p class="logo" style="font-size:22px;margin-bottom:10px">Juno Hale</p>
+    <p>Image consulting and personal styling<br>412 West 13th Street, Suite 3<br>New York, NY 10014</p>
+  </div>
+  <div class="col"><p class="eyebrow" style="margin-bottom:9px;color:#9D9289">Work with me</p>
+    <p><a href="services.html">Services and rates</a><br><a href="transformations.html">Transformations</a><br><a href="contact.html">Book a session</a><br><a href="services.html#faq">Questions</a></p></div>
+  <div class="col"><p class="eyebrow" style="margin-bottom:9px;color:#9D9289">About</p>
+    <p><a href="about.html">Who I am</a><br><a href="about.html#method">How I work</a><br><a href="about.html#no">What I don&rsquo;t do</a><br><a href="contact.html">Get in touch</a></p></div>
+  <div class="col"><p class="eyebrow" style="margin-bottom:9px;color:#9D9289">Elsewhere</p>
+    <p><a href="contact.html">Instagram</a><br><a href="contact.html">Substack</a><br><a href="mailto:hello@junohale.com">hello@junohale.com</a><br><a href="contact.html">+1 212 555 0148</a></p></div>
+  <div class="ft"><p>&copy; 2026 Juno Hale</p><p>Demonstration site</p></div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
