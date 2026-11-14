@@ -118,6 +118,9 @@ img.ph-img[style*="flex"]{min-width:0}
      evite que deux photos se retrouvent collees au changement de section */
   section > div:has(> img.ph-img),
   section > div:has(> a > img.ph-img){order:-1}
+  /* cartes dont l'image est un enfant direct du lien */
+  a[style*="display:flex"] > img.ph-img,
+  div[style*="display:flex"] > img.ph-img{order:-1}
 
   /* un peu d'air entre deux sections qui s'enchainent */
   section{padding-top:52px!important;padding-bottom:52px!important}
