@@ -114,6 +114,7 @@ footer .ft{flex:1 1 100%;border-top:1px solid #443039;padding-top:20px;display:f
   .body p{font-size:16px}
   .split{gap:22px}
   .split > div:has(> .fill),.split > div:has(> img),.split > .fill,.split > img{order:-1}
+  .split.noflip > div:has(> img){order:0}
   section{padding-top:46px!important;padding-bottom:46px!important}
   .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
   footer .col{flex:1 1 140px}
