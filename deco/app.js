@@ -100,3 +100,15 @@
 
   paint(); render();
 })();
+
+(function(){
+  var b=document.querySelector('.burger'), n=document.querySelector('header.nav nav');
+  if(!b||!n) return;
+  b.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+    b.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+  });
+  n.addEventListener('click',function(e){ if(e.target.closest('a')){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
+  addEventListener('resize',function(){ if(innerWidth>860){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
+})();
