@@ -107,3 +107,18 @@ img.ph-img[style*="flex"]{min-width:0}
   .nav nav{inset-top:73px}
   .logo{font-size:19px!important}
 }
+
+/* ---- corrections mobile : cadrage des visages et rythme des images ---- */
+@media(max-width:860px){
+  /* les photos avec des personnes se recadrent vers le haut, pas au centre */
+  img.ph-img[src*="portrait"],img.ph-img[src*="atelier"]{object-position:50% 18%}
+  img.ph-img[src*="hero"]{object-position:50% 42%}
+
+  /* dans un bloc a deux colonnes, l'image passe toujours en premier :
+     evite que deux photos se retrouvent collees au changement de section */
+  section > div:has(> img.ph-img),
+  section > div:has(> a > img.ph-img){order:-1}
+
+  /* un peu d'air entre deux sections qui s'enchainent */
+  section{padding-top:52px!important;padding-bottom:52px!important}
+}
